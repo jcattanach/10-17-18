@@ -10,6 +10,11 @@ let viewList = document.querySelector('#viewList')
 let groceryLists = []
 let groceryItems = []
 
+function removeDatabaseData(){
+  listRef.child('kroger').remove()
+}
+//removeDatabaseData()
+
 function displayLists(groceryLists){
   let listItems = groceryLists.map(function(groceryList){
     return `<li>${groceryList.name}</li>`
